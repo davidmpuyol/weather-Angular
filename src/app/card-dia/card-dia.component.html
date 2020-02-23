@@ -1,0 +1,41 @@
+<div class="card rounded">
+    <h3 class="card-title text-center mt-1"><b>{{ datos.fecha | date}}</b></h3>
+    <img class="card-img-top" src="{{ url }}">
+    <div class="card-body">
+        <p class="card-text text-center"><b>{{ datos.estadoCielo[0].descripcion }}</b></p>
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Máxima</th>
+                    <th>Mínima</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Temperatura</th>
+                    <td> {{ datos.temperatura.maxima }}°C </td>
+                    <td> {{ datos.temperatura.minima }}°C </td>
+                </tr>
+                <tr>
+                    <th scope="row">Sensación térmica</th>
+                    <td> {{ datos.sensTermica.maxima }}°C </td>
+                    <td> {{ datos.sensTermica.minima }}°C </td>
+                </tr>
+                <tr>
+                    <th scope="row">Humedad</th>
+                    <td> {{ datos.humedadRelativa.maxima }}% </td>
+                    <td> {{ datos.humedadRelativa.minima }}% </td>
+                </tr>
+                <tr>
+                    <th scope="row">Prob. lluvia</th>
+                    <td colspan="2">{{ datos.probPrecipitacion[0].value }}%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Viento</th>
+                    <td colspan="2">{{ datos.viento[0].velocidad }}km/h {{datos.viento[0].direccion }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

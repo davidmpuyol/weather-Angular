@@ -1,0 +1,13 @@
+#input, #botonBuscar{
+    height: 50px;
+    margin-top: 10px;
+
+}
+.toolbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #484949;
+    color: white;
+  }

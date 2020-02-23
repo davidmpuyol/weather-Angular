@@ -1,0 +1,22 @@
+
+<style>
+
+</style>
+
+<!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <div class="h-100 p-1">
+      <img height="100%" alt="Angular Logo" src="../assets/icons/android-icon-96x96.png"/>
+    <span class="ml-2 mr-5 display-5"><b>El tiempo</b></span>
+    </div>
+    <div class="h-100 d-flex align-items-center">
+      <div class="form-group d-flex align-items-center">
+        <input type="text" class="form-control" [(ngModel)]="texto" name="" id="input" aria-describedby="helpId" placeholder="">
+        <button class="btn btn-danger ml-2" id="botonBuscar" (click)="buscarPueblos()">Buscar</button>
+      </div>
+    </div>
+    <h5 class="mb-0 mr-2">Made by David Medina Puyol</h5>
+  </div>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>

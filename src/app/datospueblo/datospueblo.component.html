@@ -1,0 +1,13 @@
+<div *ngIf="datos != null" class="pt-2">
+    <div id="carouselId" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="h2 text-center">El tiempo en {{ datos.nombre }}</div>
+                <div class="h3 text-center">( {{ datos.provincia }} )</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-card-dia *ngFor="let dia of predicciones" [datos]="dia" class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2"></app-card-dia>
+    </div>
+</div>
